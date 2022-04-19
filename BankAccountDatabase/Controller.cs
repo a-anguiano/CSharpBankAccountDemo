@@ -137,6 +137,8 @@ namespace BankAccountDatabase.UI
             {
                 DisplayError(result.Errors);
             }
+
+            CurrentAccount = BankAccounts.Get(CurrentAccount.Id).Data;
         }
 
 

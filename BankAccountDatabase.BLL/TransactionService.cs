@@ -89,6 +89,7 @@ namespace BankAccountDatabase.BLL
             }
 
             BankAccount acct = acctResult.Data;
+            transaction.Note = "";
 
             decimal delta = ValidateTransaction(acct, transaction, result.Errors);
 
@@ -107,7 +108,16 @@ namespace BankAccountDatabase.BLL
                 {
                     try
                     {
-                        BankAccounts.Save(acct);
+                        Result<BankAccount> baResult = BankAccounts.Save(acct);
+                        if (!baResult.Success)
+                        {
+                            foreach (String error in baResult.Errors)
+                            {
+                                result.Errors.Add(error);
+                            }
+                            Repo.Delete(result.Data.Id);
+                        }
+
                     } catch (Exception e)
                     {
                         result.Errors.Add(e.Message);

@@ -21,3 +21,9 @@ C:\Users\jason\source\repos\BankAccountDatabase\BankAccountDatabase\obj\Debug\ne
 C:\Users\jason\source\repos\BankAccountDatabase\BankAccountDatabase\obj\Debug\net5.0\ref\BankAccountDatabase.UI.dll
 C:\Users\jason\source\repos\BankAccountDatabase\BankAccountDatabase\obj\Debug\net5.0\BankAccountDatabase.UI.pdb
 C:\Users\jason\source\repos\BankAccountDatabase\BankAccountDatabase\obj\Debug\net5.0\BankAccountDatabase.UI.genruntimeconfig.cache
+C:\Users\jason\source\repos\BankAccountDatabase\BankAccountDatabase\bin\Debug\net5.0\System.Data.SqlClient.dll
+C:\Users\jason\source\repos\BankAccountDatabase\BankAccountDatabase\bin\Debug\net5.0\runtimes\win-arm64\native\sni.dll
+C:\Users\jason\source\repos\BankAccountDatabase\BankAccountDatabase\bin\Debug\net5.0\runtimes\win-x64\native\sni.dll
+C:\Users\jason\source\repos\BankAccountDatabase\BankAccountDatabase\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
+C:\Users\jason\source\repos\BankAccountDatabase\BankAccountDatabase\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\jason\source\repos\BankAccountDatabase\BankAccountDatabase\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
