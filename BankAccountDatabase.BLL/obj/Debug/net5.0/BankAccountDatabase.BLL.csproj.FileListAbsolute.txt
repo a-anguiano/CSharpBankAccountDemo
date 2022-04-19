@@ -1,0 +1,15 @@
+C:\Users\jason\source\repos\BankAccountDatabase\BankAccountDatabase.BLL\bin\Debug\net5.0\BankAccountDatabase.BLL.deps.json
+C:\Users\jason\source\repos\BankAccountDatabase\BankAccountDatabase.BLL\bin\Debug\net5.0\BankAccountDatabase.BLL.dll
+C:\Users\jason\source\repos\BankAccountDatabase\BankAccountDatabase.BLL\bin\Debug\net5.0\ref\BankAccountDatabase.BLL.dll
+C:\Users\jason\source\repos\BankAccountDatabase\BankAccountDatabase.BLL\bin\Debug\net5.0\BankAccountDatabase.BLL.pdb
+C:\Users\jason\source\repos\BankAccountDatabase\BankAccountDatabase.BLL\bin\Debug\net5.0\BankAccountDatabase.Core.dll
+C:\Users\jason\source\repos\BankAccountDatabase\BankAccountDatabase.BLL\bin\Debug\net5.0\BankAccountDatabase.Core.pdb
+C:\Users\jason\source\repos\BankAccountDatabase\BankAccountDatabase.BLL\obj\Debug\net5.0\BankAccountDatabase.BLL.csproj.AssemblyReference.cache
+C:\Users\jason\source\repos\BankAccountDatabase\BankAccountDatabase.BLL\obj\Debug\net5.0\BankAccountDatabase.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jason\source\repos\BankAccountDatabase\BankAccountDatabase.BLL\obj\Debug\net5.0\BankAccountDatabase.BLL.AssemblyInfoInputs.cache
+C:\Users\jason\source\repos\BankAccountDatabase\BankAccountDatabase.BLL\obj\Debug\net5.0\BankAccountDatabase.BLL.AssemblyInfo.cs
+C:\Users\jason\source\repos\BankAccountDatabase\BankAccountDatabase.BLL\obj\Debug\net5.0\BankAccountDatabase.BLL.csproj.CoreCompileInputs.cache
+C:\Users\jason\source\repos\BankAccountDatabase\BankAccountDatabase.BLL\obj\Debug\net5.0\BankAccountDatabase.BLL.csproj.CopyComplete
+C:\Users\jason\source\repos\BankAccountDatabase\BankAccountDatabase.BLL\obj\Debug\net5.0\BankAccountDatabase.BLL.dll
+C:\Users\jason\source\repos\BankAccountDatabase\BankAccountDatabase.BLL\obj\Debug\net5.0\ref\BankAccountDatabase.BLL.dll
+C:\Users\jason\source\repos\BankAccountDatabase\BankAccountDatabase.BLL\obj\Debug\net5.0\BankAccountDatabase.BLL.pdb

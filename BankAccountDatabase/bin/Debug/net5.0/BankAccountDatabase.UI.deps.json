@@ -1,0 +1,64 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "BankAccountDatabase.UI/1.0.0": {
+        "dependencies": {
+          "BankAccountDatabase.BLL": "1.0.0",
+          "BankAccountDatabase.Core": "1.0.0",
+          "BankAccountDatabase.DAL": "1.0.0"
+        },
+        "runtime": {
+          "BankAccountDatabase.UI.dll": {}
+        }
+      },
+      "BankAccountDatabase.BLL/1.0.0": {
+        "dependencies": {
+          "BankAccountDatabase.Core": "1.0.0"
+        },
+        "runtime": {
+          "BankAccountDatabase.BLL.dll": {}
+        }
+      },
+      "BankAccountDatabase.Core/1.0.0": {
+        "runtime": {
+          "BankAccountDatabase.Core.dll": {}
+        }
+      },
+      "BankAccountDatabase.DAL/1.0.0": {
+        "dependencies": {
+          "BankAccountDatabase.Core": "1.0.0"
+        },
+        "runtime": {
+          "BankAccountDatabase.DAL.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BankAccountDatabase.UI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BankAccountDatabase.BLL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BankAccountDatabase.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BankAccountDatabase.DAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
