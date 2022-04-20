@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Diagnostics;
 using BankAccountDatabase.Core.Model;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace BankAccountDatabase.DAL
 {
@@ -17,6 +19,11 @@ namespace BankAccountDatabase.DAL
         public AppDbContext(DbContextOptions options) : base(options)
         {
 
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.LogTo(message => Debug.WriteLine(message), LogLevel.Information);
         }
 
         protected override void OnModelCreating(ModelBuilder builder)

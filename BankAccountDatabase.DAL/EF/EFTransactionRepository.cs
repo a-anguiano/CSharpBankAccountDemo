@@ -49,7 +49,7 @@ namespace BankAccountDatabase.DAL.EF
             using (var db = DbFac.GetDbContext())
             {
                 List<Transaction> results = db.Transactions
-                    .Where(t =>  t.BankAccountId == accountId ).ToList();
+                    .Where(t => t.BankAccountId == accountId ).ToList();
 
                 return results;
             }
