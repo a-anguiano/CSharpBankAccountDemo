@@ -21,6 +21,8 @@ namespace BankAccountDatabase.DAL
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            //This is for translating an Enum field to and from string values
+            //Probably you won't need this.
             builder
             .Entity<Transaction>()
             .Property(e => e.Type)
