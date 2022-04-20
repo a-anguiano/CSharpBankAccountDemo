@@ -26,7 +26,7 @@ namespace BankAccountDatabase.DAL
                 connection.Open();
 
                 var command = new SqlCommand(sql, connection);
-                command.Parameters.AddWithValue("@AccountId", transaction.AccountId);
+                command.Parameters.AddWithValue("@AccountId", transaction.BankAccountId);
                 command.Parameters.AddWithValue("@TransactionType", transaction.Type.ToString());
                 command.Parameters.AddWithValue("@Timestamp", transaction.Timestamp);
                 command.Parameters.AddWithValue("@Amount", transaction.Amount);

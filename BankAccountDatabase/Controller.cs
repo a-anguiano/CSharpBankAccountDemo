@@ -124,7 +124,7 @@ namespace BankAccountDatabase.UI
 
             tran.Amount = IO.GetDecimal("Amount");
             tran.Timestamp = DateTime.Now;
-            tran.AccountId = CurrentAccount.Id;
+            tran.BankAccountId = CurrentAccount.Id;
 
             Result<Transaction> result = Transactions.Add(tran);
             if (result.Success)

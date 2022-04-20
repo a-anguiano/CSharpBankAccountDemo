@@ -80,7 +80,7 @@ namespace BankAccountDatabase.BLL
         {
             Result<Transaction> result = new Result<Transaction>();
 
-            Result<BankAccount> acctResult = BankAccounts.Get(transaction.AccountId);
+            Result<BankAccount> acctResult = BankAccounts.Get(transaction.BankAccountId);
 
             if (!acctResult.Success)
             {

@@ -11,5 +11,7 @@ namespace BankAccountDatabase.Core.Model
         public int Id { get; set; }
         public string AccountHolder { get; set; }
         public decimal CurrentBalance { get; set; }
+
+        public List<Transaction> Transactions { get; set; }
     }
 }

@@ -35,7 +35,7 @@ namespace BankAccountDatabase.DAL
             List<Transaction> result = new List<Transaction>();
             foreach (Transaction t in Transactions.Values)
             {
-                if (t.AccountId == accountId)
+                if (t.BankAccountId == accountId)
                 {
                     result.Add(t);
                 }
