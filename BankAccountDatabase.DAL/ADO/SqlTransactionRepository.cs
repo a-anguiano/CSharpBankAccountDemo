@@ -58,5 +58,10 @@ namespace BankAccountDatabase.DAL
         {
             throw new NotImplementedException();
         }
+
+        public Transaction AddTransactionToAccount(BankAccount account, Transaction transaction)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

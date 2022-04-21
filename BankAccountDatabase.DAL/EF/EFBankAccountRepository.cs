@@ -30,6 +30,11 @@ namespace BankAccountDatabase.DAL.EF
         {
             using (var db = DbFac.GetDbContext())
             {
+                foreach (Transaction t in db.Transactions.Where(t => t.BankAccountId == id).ToList())
+                {
+                    db.Transactions.Remove(t);
+                }
+
                 BankAccount acct = db.BankAccounts.Find(id);
                 db.BankAccounts.Remove(acct);
                 db.SaveChanges();

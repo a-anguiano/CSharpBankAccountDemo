@@ -9,6 +9,12 @@ namespace BankAccountDatabase.DAL
     {
         public Dictionary<int, Transaction> Transactions { get; set; } = new Dictionary<int, Transaction>();
         private int _nextId = 1;
+        public IBankAccountRepository BankAccounts;
+
+        public InMemoryTransactionRepository(IBankAccountRepository bankAccounts)
+        {
+            BankAccounts = bankAccounts;
+        }
 
         public Transaction Add(Transaction transaction)
         {
@@ -57,6 +63,12 @@ namespace BankAccountDatabase.DAL
             }
 
             return result;
+        }
+
+        public Transaction AddTransactionToAccount(BankAccount account, Transaction transaction)
+        {
+            BankAccounts.Update(account);
+            return Add(transaction);
         }
     }
 }

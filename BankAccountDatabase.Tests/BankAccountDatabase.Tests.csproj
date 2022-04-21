@@ -13,4 +13,11 @@
     <PackageReference Include="coverlet.collector" Version="3.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BankAccountDatabase.BLL\BankAccountDatabase.BLL.csproj" />
+    <ProjectReference Include="..\BankAccountDatabase.Core\BankAccountDatabase.Core.csproj" />
+    <ProjectReference Include="..\BankAccountDatabase.DAL\BankAccountDatabase.DAL.csproj" />
+    <ProjectReference Include="..\BankAccountDatabase\BankAccountDatabase.UI.csproj" />
+  </ItemGroup>
+
 </Project>

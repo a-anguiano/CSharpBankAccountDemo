@@ -14,23 +14,12 @@ namespace BankAccountDatabase.DAL.EF
         {
             DbFac = dbFac;
         }
-
-        public Transaction Add(Transaction transaction)
+        public Transaction AddTransactionToAccount(BankAccount account, Transaction transaction)
         {
             using (var db = DbFac.GetDbContext())
             {
+                db.BankAccounts.Update(account);
                 db.Transactions.Add(transaction);
-                db.SaveChanges();
-                return transaction;
-            }
-        }
-
-        public Transaction Delete(int id)
-        {
-            using (var db = DbFac.GetDbContext())
-            {
-                Transaction transaction = db.Transactions.Find(id);
-                db.Remove(transaction);
                 db.SaveChanges();
                 return transaction;
             }

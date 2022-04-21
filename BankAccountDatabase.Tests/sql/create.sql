@@ -1,11 +1,11 @@
 ﻿use master;
 go
-ALTER DATABASE BankOfKlueberia SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
-drop database BankOfKlueberia;
+ALTER DATABASE TestBankOfKlueberia SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+drop database TestBankOfKlueberia;
 go
-create database BankOfKlueberia;
+create database TestBankOfKlueberia;
 go
-use BankOfKlueberia;
+use TestBankOfKlueberia;
 go
 
 create table BankAccounts (

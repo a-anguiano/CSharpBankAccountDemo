@@ -7,6 +7,8 @@ namespace BankAccountDatabase.BLL
 {
     public class TransactionService : ITransactionService
     {
+        public const string NSF_MESSAGE = "Declined:  Insufficient Funds";
+
         ITransactionRepository Repo { get; set; }
         IBankAccountService BankAccounts { get; set; }
 
@@ -14,21 +16,6 @@ namespace BankAccountDatabase.BLL
         {
             Repo = repo;
             BankAccounts = bankAccounts;
-        }
-
-        public Result<Transaction> Delete(int id)
-        {
-            Result<Transaction> result = new Result<Transaction>();
-            try
-            {
-                result.Data = Repo.Delete(id);
-            }
-            catch (Exception e)
-            {
-                result.Errors.Add(e.Message);
-            }
-
-            return result;
         }
 
         public Result<Transaction> Get(int id)
@@ -96,34 +83,8 @@ namespace BankAccountDatabase.BLL
             if (result.Success)
             {
                 acct.CurrentBalance += delta;
-                try
-                {
-                    result.Data = Repo.Add(transaction);                    
-                } catch (Exception e)
-                {
-                    result.Errors.Add(e.Message);
-                }
 
-                if (result.Success)
-                {
-                    try
-                    {
-                        Result<BankAccount> baResult = BankAccounts.Save(acct);
-                        if (!baResult.Success)
-                        {
-                            foreach (String error in baResult.Errors)
-                            {
-                                result.Errors.Add(error);
-                            }
-                            Repo.Delete(result.Data.Id);
-                        }
-
-                    } catch (Exception e)
-                    {
-                        result.Errors.Add(e.Message);
-                        Repo.Delete(result.Data.Id);
-                    }
-                }
+                Repo.AddTransactionToAccount(acct, transaction);
             }
 
             return result;
@@ -140,7 +101,7 @@ namespace BankAccountDatabase.BLL
 
             if (acct.CurrentBalance + delta < 0)
             {
-                errors.Add("Declined:  Insufficient Funds");
+                errors.Add(NSF_MESSAGE);
             }
 
             return delta;

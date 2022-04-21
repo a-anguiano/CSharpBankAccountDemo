@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace BankAccountDatabase.UI
 {
-    class ConfigProvider
+    public class ConfigProvider
     {
         public IConfigurationRoot Config { get; private set; }
         public ConfigProvider()
         {
             var builder = new ConfigurationBuilder();
+
             builder.AddUserSecrets<Program>();
             Config = builder.Build();
         }

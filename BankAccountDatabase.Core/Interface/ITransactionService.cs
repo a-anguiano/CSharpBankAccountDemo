@@ -10,6 +10,5 @@ namespace BankAccountDatabase.Core.Interface
         public Result<List<Transaction>> GetAllForAccount(int accountId);
         public Result<List<Transaction>> GetAllForAccountAndDateRange(int accountId, DateTime from, DateTime to);
         public Result<Transaction> Add(Transaction transaction);
-        public Result<Transaction> Delete(int id);
     }
 }

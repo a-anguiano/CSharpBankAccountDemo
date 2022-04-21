@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BankAccountDatabase.Core.Model
 {
@@ -13,5 +10,19 @@ namespace BankAccountDatabase.Core.Model
         public decimal CurrentBalance { get; set; }
 
         public List<Transaction> Transactions { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            return obj is BankAccount account &&
+                   Id == account.Id &&
+                   AccountHolder == account.AccountHolder &&
+                   CurrentBalance == account.CurrentBalance &&
+                   EqualityComparer<List<Transaction>>.Default.Equals(Transactions, account.Transactions);
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Id, AccountHolder, CurrentBalance, Transactions);
+        }
     }
 }

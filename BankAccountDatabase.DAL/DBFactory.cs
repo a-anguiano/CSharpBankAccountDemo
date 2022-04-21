@@ -3,20 +3,26 @@ using Microsoft.Extensions.Configuration;
 
 namespace BankAccountDatabase.DAL
 {
+    public enum FactoryMode
+    {
+        TEST,
+        PROD
+    }
+
     public class DBFactory
     {
         private readonly IConfigurationRoot Config;
-        private readonly bool Test;
+        private readonly FactoryMode Mode;
 
-        public DBFactory(IConfigurationRoot config, bool test = false)
+        public DBFactory(IConfigurationRoot config, FactoryMode mode = FactoryMode.PROD)
         {
             Config = config;
-            Test = test;
+            Mode = mode;
         }
 
         public AppDbContext GetDbContext()
         {
-            string environment = Test ? "Test" : "Prod";
+            string environment = Mode == FactoryMode.TEST ? "Test" : "Prod";
 
             var options = new DbContextOptionsBuilder<AppDbContext>()
                 .UseSqlServer(Config[$"ConnectionStrings:{environment}"])
